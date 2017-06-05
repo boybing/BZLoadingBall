@@ -23,6 +23,15 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
+        NSLog(@"use 'BzGetLoadingBallWithFrame: AndWidth:' please");
+    }
+    return nil;
+}
+
+- (instancetype)initWithFrameBall:(CGRect)frame
+{
+    self = [super initWithFrame:frame];
+    if (self) {
         _wid = frame.size.width;
         self.layer.borderWidth = 1.0f;
         self.layer.borderColor = [UIColor colorWithRed:102.0f/255.0f green:204.0f/255.0f blue:255.0f/255.0f alpha:1].CGColor;
@@ -53,7 +62,7 @@
 }
 
 +(instancetype)BzGetLoadingBallWithFrame:(CGPoint)point AndWidth:(CGFloat)wid{
-    return [[LoadingBall alloc]initWithFrame:CGRectMake(point.x, point.y, wid, wid)];
+    return [[LoadingBall alloc]initWithFrameBall:CGRectMake(point.x, point.y, wid, wid)];
 }
 
 -(void)loadBallPercent:(CGFloat)pi{

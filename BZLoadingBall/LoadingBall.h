@@ -11,4 +11,8 @@
 @interface LoadingBall : UIScrollView
 +(instancetype)BzGetLoadingBallWithFrame:(CGPoint)point AndWidth:(CGFloat)wid;
 -(void)loadBallPercent:(CGFloat)pi;
+-(instancetype)init NS_UNAVAILABLE;
++(instancetype)new NS_UNAVAILABLE;
++(void)initialize NS_UNAVAILABLE;
+-(instancetype)initWithCoder:(NSCoder *)aDecoder NS_UNAVAILABLE;
 @end

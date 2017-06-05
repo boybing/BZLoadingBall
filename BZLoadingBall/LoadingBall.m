@@ -21,12 +21,41 @@
 @implementation LoadingBall
 - (instancetype)initWithFrame:(CGRect)frame
 {
-    self = [super initWithFrame:frame];
-    if (self) {
-        NSLog(@"use 'BzGetLoadingBallWithFrame: AndWidth:' please");
-    }
+    [self exp];
     return nil;
 }
+
+- (instancetype)init
+{
+    [self exp];
+    return nil;
+}
+
++(instancetype)new{
+    [[LoadingBall alloc ]exp];
+    return nil;
+}
+
+- (instancetype)initWithCoder:(NSCoder *)coder
+{
+    [self exp];
+    return nil;
+}
+
+-(void)exp{
+    //异常的名称
+    NSString *exceptionName = @"method using problem";
+    //异常的原因
+    NSString *exceptionReason = @"you should use the method 'BzGetLoadingBallWithFrame: AndWidth:' to creat the object";
+    //异常的信息
+    NSDictionary *exceptionUserInfo = nil;
+    
+    NSException *exception = [NSException exceptionWithName:exceptionName reason:exceptionReason userInfo:exceptionUserInfo];
+    //抛异常
+    @throw exception;
+}
+
+
 
 - (instancetype)initWithFrameBall:(CGRect)frame
 {

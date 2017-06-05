@@ -23,9 +23,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-//    ball = [LoadingBall BzGetLoadingBallWithFrame:CGPointMake(100, 100) AndWidth:200];
+    ball = [LoadingBall BzGetLoadingBallWithFrame:CGPointMake(100, 100) AndWidth:200];
 //    ball = [[LoadingBall alloc]initWithFrame:CGRectMake(100, 100, 100, 100)];
-    ball = [LoadingBall new];
+//    ball = [LoadingBall new];
     [self.view addSubview:ball];
     
 }

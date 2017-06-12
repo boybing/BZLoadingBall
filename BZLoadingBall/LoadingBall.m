@@ -85,7 +85,7 @@
     [self addSubview:wwv];
     
     cr = [[colorNumber alloc]initWithFrame:CGRectMake(0, 0, _wid, 2*_wid)];
-    [cr.colorLabel setFrame:CGRectMake(0, -0.5*_wid, cr.colorLabel.frame.size.width, cr.colorLabel.frame.size.height)];
+    [cr.colorLabel setFrame:CGRectMake(0, -0.5*_wid, CGRectGetWidth(cr.colorLabel.bounds), CGRectGetHeight(cr.colorLabel.bounds))];
     [self addSubview:cr];
     
 }
@@ -96,7 +96,7 @@
 
 -(void)loadBallPercent:(CGFloat)pi{
     lb.contentOffset = CGPointMake(0, (pi / 100) * _wid);
-    cr.colorLabel.frame = CGRectMake(0, -0.5*_wid+(pi / 100) * _wid, cr.colorLabel.frame.size.width, cr.colorLabel.frame.size.height);
+    cr.colorLabel.frame = CGRectMake(0, -0.5*_wid+(pi / 100) * _wid, CGRectGetWidth(cr.colorLabel.bounds), CGRectGetHeight(cr.colorLabel.bounds));
     cr.colorLabel.text = [NSString stringWithFormat:@"%.f%@", (pi / 100)*100,@"%"];
 }
 @end
